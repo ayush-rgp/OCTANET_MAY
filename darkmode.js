@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
   function updateButtonText() {
     const isDarkModeActive = rootElement.classList.contains('dark-mode');
     if (toggleButton) {
-      toggleButton.textContent = isDarkModeActive ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+      toggleButton.textContent = isDarkModeActive ? 'Switch mode' : 'Switch mode';
     }
   }
 });
