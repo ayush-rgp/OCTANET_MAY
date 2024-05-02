@@ -1,10 +1,17 @@
-const body = document.querySelector('body');
+document.addEventListener('DOMContentLoaded', function() {
+  const rootElement = document.documentElement;
+  const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-const modeToggle = document.querySelector('#mode-toggle');
+  if (isDarkMode) {
+    rootElement.classList.add('dark-mode');
+  }
 
-function toggleMode() {
-  body.classList.toggle('dark-mode');
-  body.classList.toggle('light-mode');
-}
+  const toggleButton = document.getElementById('toggle-mode');
 
-modeToggle.addEventListener('click', toggleMode);
+  if (toggleButton) {
+    toggleButton.addEventListener('click', () => {
+      rootElement.classList.toggle('dark-mode');
+    });
+  }
+});
+
